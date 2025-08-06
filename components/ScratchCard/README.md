@@ -75,7 +75,7 @@ Defines the top layer that the user scratches off. Can be any Skia element or fu
 
 ### `ScratchCard.Behind`
 
-Defines the hidden content revealed during scratching.
+Defines the hidden content revealed during scratching. Can be any RN element.
 
 | Prop      | Type          | Required | Description                           |
 |-----------|---------------|----------|---------------------------------------|
