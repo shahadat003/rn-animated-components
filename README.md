@@ -2,6 +2,8 @@
 
 A collection of visually rich, interactive, self-contained components built using Skia, Reanimated, and Gesture Handler. Designed to work out-of-the-box. Perfect for rapid prototyping or production use.
 
+Created with care by [Niche Guys]
+
 ---
 
 ## ✨ Features
