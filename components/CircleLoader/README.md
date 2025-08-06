@@ -3,6 +3,8 @@
 A circular animated loader built with **React Native Skia** and **Reanimated**.  
 Balls move back and forth on a perfect circular path with smooth color transitions.
 
+https://github.com/user-attachments/assets/b64d394b-ce53-4115-8e5f-e10b5b21d019
+
 ## ✨ Features
 
 - Smooth circular motion with easing  
