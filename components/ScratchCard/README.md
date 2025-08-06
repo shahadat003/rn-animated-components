@@ -3,6 +3,8 @@
 A scratchable canvas component that reveals hidden content using gesture-based interaction.  
 Built with **Skia**, **Reanimated**, and **Gesture Handler**.
 
+https://github.com/user-attachments/assets/9f66bebf-e76c-4c78-a37d-d4a398c82a44
+
 ## ✨ Features
 
 - Scratch-off effect using pan gesture  
