@@ -6,19 +6,13 @@ import { Pressable, StyleSheet, Text, View } from "react-native"
 export default function ScratchCardExample() {
   const [play, setPlay] = useState(false)
 
-  useEffect(()=> {
-    setTimeout(() => {
-      setPlay(true)
-    }, 500);
-  },[])
-
   return (
     <View style={styles.container}>
-      {/* <Pressable onPress={()=> setPlay(p => !p)} style={{marginBottom: 32}}>
+      <Pressable onPress={()=> setPlay(p => !p)} style={{marginBottom: 32}}>
         <Text style={styles.playText}>
           {play ? "Reset" : "Play"}
         </Text>
-      </Pressable> */}
+      </Pressable>
       <CircleLoader
         radius={80}
         circleR={4}
