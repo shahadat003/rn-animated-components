@@ -3,6 +3,8 @@
 A custom animated toggle switch with a liquid-like sliding effect and optional icon support.  
 Crafted using **React Native Skia** and **Reanimated**.
 
+https://github.com/user-attachments/assets/b9107e53-426b-4dc1-8c5c-a18d6b292856
+
 ## ✨ Features
 
 - Smooth switch animation with a unique liquid effect  
