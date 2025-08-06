@@ -10,6 +10,7 @@ export default function LiquidSwitchExample() {
       <LiquidSwitch
         onChange={(val)=> console.log(val)}
         size={60}
+        initialValue={true}
         gap={6}
         trackColors={{
           true: colors.blue1,

@@ -85,6 +85,7 @@ This component is **self-contained** and can be used by simply copying the file.
 | `height` | number         | Yes      | Height of the image                              |
 | `fit`    | string         | No       | One of `"contain"`, `"cover"`, `"fill"`, etc.    |
 | `color`  | string (rgba)  | No       | Tint color applied using Skia ColorMatrix        |
+| `initialValue`  | boolean | No       | Initial value of the switch        |
 
 ---
 

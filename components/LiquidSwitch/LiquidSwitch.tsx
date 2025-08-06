@@ -7,6 +7,7 @@ interface Props {
   size?: number, //acts as the height. width will be calculated related to width.
   onChange: (value: boolean)=> void,
   containerStyle?: ViewStyle,
+  initialValue?: boolean,
   gap?: number,
   trackColors?: {
     true: string, 
@@ -63,11 +64,12 @@ function LiquidSwitch({
     false: "#adb5bd",
   },
   thumbColor = "white",
-  images
+  images,
+  initialValue = false
 }: Props) {
-  const progress = useSharedValue(0)
-  const innerProgress = useSharedValue(0)
-  const isTrue = useRef(false)
+  const progress = useSharedValue(initialValue ? 1 : 0)
+  const innerProgress = useSharedValue(initialValue ? 1 : 0)
+  const isTrue = useRef(initialValue)
 
   const trueImage = useImage(images?.true?.source)
   const falseImage = useImage(images?.false?.source)
