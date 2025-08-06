@@ -75,6 +75,7 @@ This component is **self-contained** and can be used by simply copying the file.
 | `trackColors`  | object   | No       | `{ true: "#1690F3", false: "#adb5bd" }` | Background colors for ON/OFF states                            |
 | `thumbColor`   | string   | No       | `"white"`                        | Color of the thumb ball                                                  |
 | `images`       | object   | No       | —                                | Optional image icons for ON/OFF states                                   |
+| `initialValue`  | boolean | No       | `false`                          | Initial value of the switch
 
 ### `images.true` and `images.false` structure
 
@@ -85,7 +86,6 @@ This component is **self-contained** and can be used by simply copying the file.
 | `height` | number         | Yes      | Height of the image                              |
 | `fit`    | string         | No       | One of `"contain"`, `"cover"`, `"fill"`, etc.    |
 | `color`  | string (rgba)  | No       | Tint color applied using Skia ColorMatrix        |
-| `initialValue`  | boolean | No       | Initial value of the switch        |
 
 ---
 
