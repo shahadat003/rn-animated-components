@@ -1,4 +1,4 @@
-import CircleLoader from "@/components/CircleLoader"
+import CircleLoader from "@/components/CircleLoader/CircleLoader"
 import colors from "@/theme/colors"
 import React from "react"
 import { StyleSheet, View } from "react-native"

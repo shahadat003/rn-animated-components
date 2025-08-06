@@ -1,4 +1,4 @@
-import LiquidSwitch from "@/components/LiquidSwitch"
+import LiquidSwitch from "@/components/LiquidSwitch/LiquidSwitch"
 import colors from "@/theme/colors"
 import React from "react"
 import { StyleSheet, View } from "react-native"

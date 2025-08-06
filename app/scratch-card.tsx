@@ -1,4 +1,4 @@
-import ScratchCard from "@/components/ScratchCard"
+import ScratchCard from "@/components/ScratchCard/ScratchCard"
 import colors from "@/theme/colors"
 import { Group, RoundedRect, Text, useFont } from "@shopify/react-native-skia"
 import React from "react"

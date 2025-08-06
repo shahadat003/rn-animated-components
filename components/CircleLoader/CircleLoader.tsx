@@ -45,16 +45,6 @@ function getCirclePoints(centerX: number, centerY: number, radius: number, count
   return points;
 }
 
-function getClockwiseAngle(center: Point, point: Point): number {
-  const dx = point.x - center.x
-  const dy = point.y - center.y
-  const rawAngle = Math.atan2(dy, dx) // [-PI, PI]
-
-  // Saat yönünde, 12'den başlayacak şekilde normalize et
-  const adjusted = (Math.PI / 2 - rawAngle + 2 * Math.PI) % (2 * Math.PI)
-  return adjusted
-}
-
 function getInputRangeFromOutput<T>(output: T[]): number[] {
   const step = 1 / (output.length - 1)
   return output.map((_, i) => parseFloat((i * step).toFixed(6)))
@@ -119,7 +109,6 @@ function CircleLoader({radius = 120, circleR = 10, colors}: Props) {
             />
           ))
         }
-        {/* <Circle cx={radius} cy={radius} r={radius} style={"stroke"} color={colors.p1} strokeWidth={5}/> */}
       </Group>
     </Canvas>
   );
