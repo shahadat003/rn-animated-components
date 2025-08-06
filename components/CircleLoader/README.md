@@ -28,10 +28,24 @@ This component is **self-contained** and can be used by simply copying the file.
 3. **Use it inside your component**:
 
    ```tsx
-   import CircleLoader from "./CircleLoader";
-
-   export default function App() {
-     return <CircleLoader radius={100} circleR={8} colors={["#F00", "#0F0", "#00F"]} />
+   export default function CircleLoaderExample() {
+     const [play, setPlay] = useState(false)
+   
+     return (
+       <View style={styles.container}>
+         <Pressable onPress={()=> setPlay(p => !p)} style={{marginBottom: 32}}>
+           <Text style={styles.playText}>
+             {play ? "Reset" : "Play"}
+           </Text>
+         </Pressable>
+         <CircleLoader
+           radius={80}
+           circleR={4}
+           colors={["#EF5A57", "#F5AF00", "#4BAA4E","#EF5A57", "#F5AF00", "#4BAA4E"]}
+           isPlaying={play}
+         />
+       </View>
+     )
    }
    ```
 
@@ -47,6 +61,7 @@ This component is **self-contained** and can be used by simply copying the file.
 | `radius`  | `number`   | No       | `120`                                       | Radius of the outer circle           |
 | `circleR` | `number`   | No       | `10`                                        | Radius of each individual circle     |
 | `colors`  | `string[]` | No       | `["#EF5A57", "#F5AF00", "#4BAA4E"]`         | Color array used for animation       |
+| `isPlaying`| `boolean` | Yes      | `false`                                     | Boolean to control animation state   |
 
 ---
 
