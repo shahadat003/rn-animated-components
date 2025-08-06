@@ -7,7 +7,7 @@ import { FlatList, Image, Pressable, StyleSheet, Text, View } from "react-native
 const data: any[] = [
   {screen: "/liquid-switch", title: "Liquid Switch", icon: null},
   {screen: "/scratch-card", title: "Scratch Card", icon: null},
-  {screen: "/animated-loader", title: "Animated Loader", icon: null}
+  {screen: "/circle-loader", title: "Circle Loader", icon: null}
 ]
 
 export default function App() {

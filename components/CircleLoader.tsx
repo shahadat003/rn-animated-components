@@ -96,7 +96,7 @@ function AnimatedCircle({ startPos, endPos, index, r, colors = defaultColors }: 
   return <Circle cx={x} cy={y} r={r} color={color}/>
 }
 
-function Loader({radius = 120, circleR = 10, colors}: Props) {
+function CircleLoader({radius = 120, circleR = 10, colors}: Props) {
   const centerX = radius
   const centerY = radius
 
@@ -125,4 +125,4 @@ function Loader({radius = 120, circleR = 10, colors}: Props) {
   );
 }
 
-export default memo(Loader);
+export default memo(CircleLoader);
