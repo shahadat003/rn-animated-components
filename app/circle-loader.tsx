@@ -1,16 +1,29 @@
 import CircleLoader from "@/components/CircleLoader/CircleLoader"
 import colors from "@/theme/colors"
-import React from "react"
-import { StyleSheet, View } from "react-native"
+import React, { useEffect, useState } from "react"
+import { Pressable, StyleSheet, Text, View } from "react-native"
 
 export default function ScratchCardExample() {
+  const [play, setPlay] = useState(false)
+
+  useEffect(()=> {
+    setTimeout(() => {
+      setPlay(true)
+    }, 500);
+  },[])
 
   return (
     <View style={styles.container}>
+      {/* <Pressable onPress={()=> setPlay(p => !p)} style={{marginBottom: 32}}>
+        <Text style={styles.playText}>
+          {play ? "Reset" : "Play"}
+        </Text>
+      </Pressable> */}
       <CircleLoader
         radius={80}
         circleR={4}
         colors={["#EF5A57", "#F5AF00", "#4BAA4E","#EF5A57", "#F5AF00", "#4BAA4E"]}
+        isPlaying={play}
       />
     </View>
   )
@@ -23,4 +36,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  playText: {
+    fontFamily: "SpaceMono-Regular",
+    fontSize: 24,
+    color: "white"
+  }
 })

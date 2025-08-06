@@ -22,14 +22,12 @@ export default function ScratchCardExample() {
             width: 30,
             height: 30,
             fit: "contain",
-            color: "rgba(255, 255,255, 1)"
           },
           false: {
             source: require("../assets/icons/x.png"),
             width: 30,
             height: 30,
             fit: "contain",
-            color: "rgba(255, 255,255, 1)"
           }
         }}
       />

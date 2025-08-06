@@ -1,6 +1,6 @@
 import ScratchCard from "@/components/ScratchCard/ScratchCard"
 import colors from "@/theme/colors"
-import { Group, RoundedRect, Text, useFont } from "@shopify/react-native-skia"
+import { Group, LinearGradient, RoundedRect, Text, useFont, vec } from "@shopify/react-native-skia"
 import React from "react"
 import { Image, StyleSheet, View } from "react-native"
 
@@ -27,11 +27,17 @@ export default function ScratchCardExample() {
             ({width, height})=> {
               return (
                 <Group>
-                  <RoundedRect r={20} width={width} height={height} color={colors.green2} x={0} y={0}/>
+                  <RoundedRect r={20} width={width} height={height} x={0} y={0}>
+                    <LinearGradient
+                      start={vec(0, 0)}
+                      end={vec(width, height)}
+                      colors={["#f2b5d4", "#7bdff2"]}
+                    />
+                  </RoundedRect>
                   <Text
                     font={font}
                     text={text}
-                    color={colors.dark1}
+                    color={"white"}
                     y={(height / 2) + (20 / 3)}
                     x={(width - (font?.measureText(text).width || 0)) / 2}
                   />

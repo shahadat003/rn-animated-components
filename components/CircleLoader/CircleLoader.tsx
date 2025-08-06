@@ -1,6 +1,7 @@
 import { Canvas, Circle, Group, interpolateColors } from "@shopify/react-native-skia";
 import { memo, useEffect, useMemo } from "react";
 import {
+  cancelAnimation,
   Easing,
   interpolate,
   useDerivedValue,
@@ -15,7 +16,8 @@ type Point = { x: number; y: number };
 interface Props {
   radius?: number,
   circleR?: number,
-  colors?: string[]
+  colors?: string[],
+  isPlaying: boolean
 }
 
 interface AnimatedCircleProps {
@@ -23,7 +25,8 @@ interface AnimatedCircleProps {
   endPos: Point; 
   index: number, 
   r: number,
-  colors?: string[]
+  colors?: string[],
+  isPlaying: boolean
 }
 
 const totalCount = 18
@@ -50,22 +53,28 @@ function getInputRangeFromOutput<T>(output: T[]): number[] {
   return output.map((_, i) => parseFloat((i * step).toFixed(6)))
 }
 
-function AnimatedCircle({ startPos, endPos, index, r, colors = defaultColors }: AnimatedCircleProps) {
+function AnimatedCircle({ startPos, endPos, index, r, isPlaying, colors = defaultColors }: AnimatedCircleProps) {
   const anim = useSharedValue(0);
 
   useEffect(() => {
-    anim.value = withDelay(
-      index * delayStep,
-      withRepeat(
-        withTiming(1, {
-          duration: duration,
-          easing: Easing.inOut(Easing.sin)
-        }),
-        -1,
-        true
-      )
-    );
-  }, []);
+    if(isPlaying){
+      anim.value = withDelay(
+        index * delayStep,
+        withRepeat(
+          withTiming(1, {
+            duration: duration,
+            easing: Easing.inOut(Easing.sin)
+          }),
+          -1,
+          true
+        )
+      );
+    }else{
+      cancelAnimation(anim)
+      anim.value = withTiming(0)
+    }
+
+  }, [isPlaying]);
 
   const colorAnimationInput = useMemo(()=> {
     return getInputRangeFromOutput(colors)
@@ -86,7 +95,7 @@ function AnimatedCircle({ startPos, endPos, index, r, colors = defaultColors }: 
   return <Circle cx={x} cy={y} r={r} color={color}/>
 }
 
-function CircleLoader({radius = 120, circleR = 10, colors}: Props) {
+function CircleLoader({radius = 120, circleR = 10, colors, isPlaying}: Props) {
   const centerX = radius
   const centerY = radius
 
@@ -106,6 +115,7 @@ function CircleLoader({radius = 120, circleR = 10, colors}: Props) {
               endPos={balls[index + ballCount]}
               r={circleR}
               colors={colors}
+              isPlaying={isPlaying}
             />
           ))
         }
