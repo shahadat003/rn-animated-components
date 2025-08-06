@@ -108,13 +108,11 @@ function LiquidSwitch({
     
     console.log("Creating paint for color:", color);
     const paint = Skia.Paint();
-    // RGBA string'i parse et (örn: "rgba(255,255,255,0.8)" veya "rgba(22, 100, 13, 1)")
     const rgbaMatch = color.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(?:,\s*([\d.]+))?\s*\)/);
     
     if (rgbaMatch) {
       const matrix = rgbaStringToColorMatrix(color)
             
-      // Tint color filter - orijinal resmin yapısını korur
       paint.setColorFilter(
         Skia.ColorFilter.MakeMatrix(matrix)
       );

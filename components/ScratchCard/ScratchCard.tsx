@@ -128,7 +128,6 @@ const Behind = function Behind({ children }: SlotProps) {
 ScratchCard.Overlay = Overlay
 ScratchCard.Behind = Behind
 
-// ensure intellisense support for ScratchCard.Overlay and .Behind
 const MemoScratchCard = Object.assign(memo(ScratchCard), {
   Overlay,
   Behind,
