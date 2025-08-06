@@ -50,8 +50,8 @@ A collection of visually rich, interactive, self-contained components built usin
 Clone this repo and run the demo app:
 
 ```bash
-git clone https://github.com/your-username/animated-components-expo.git
-cd animated-components-expo
+git clone https://github.com/ogulcanbagatir/rn-animated-components.git
+cd rn-animated-components
 npx expo install
 npx expo start
 ```
