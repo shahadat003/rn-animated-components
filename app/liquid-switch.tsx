@@ -3,7 +3,7 @@ import colors from "@/theme/colors"
 import React from "react"
 import { StyleSheet, View } from "react-native"
 
-export default function ScratchCardExample() {
+export default function LiquidSwitchExample() {
 
   return (
     <View style={styles.container}>

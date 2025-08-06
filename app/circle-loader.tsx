@@ -1,9 +1,9 @@
 import CircleLoader from "@/components/CircleLoader/CircleLoader"
 import colors from "@/theme/colors"
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Pressable, StyleSheet, Text, View } from "react-native"
 
-export default function ScratchCardExample() {
+export default function CircleLoaderExample() {
   const [play, setPlay] = useState(false)
 
   return (
