@@ -6,9 +6,7 @@ A collection of visually rich, interactive, self-contained components built usin
 
 ## ✨ Features
 
-- 🏗 Built for **Expo** — no native config needed  
 - 🧠 Powered by **Skia**, **Reanimated**, and **Gesture Handler**  
-- 🎨 Modern UI patterns
 - 📦 Self-contained components — use only what you need  
 - 📱 Comes with a **demo app** to preview all components live  
 
@@ -27,7 +25,7 @@ A collection of visually rich, interactive, self-contained components built usin
 ## 🚀 Usage
 
 1. **Copy the Component**  
-   Find the component you want and copy its folder into your project.
+   Find the component you want in components folder and copy its folder into your project.
 
 2. **Install Dependencies**  
    Make sure you have the required libraries:
