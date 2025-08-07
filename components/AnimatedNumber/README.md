@@ -19,15 +19,17 @@ This component is self-contained and can be used by simply copying the file.
 1. Copy and paste the AnimatedNumber.tsx file into your project
 2. Install required dependency if not already installed:
 
-    npx expo install react-native-reanimated
+   ```bash
+   npx expo install react-native-reanimated 
+   ```
 
 3. Use it inside your component:
-
+   ```tsx
     import AnimatedNumber from "./AnimatedNumber"
     import { TextInput, View } from "react-native"
     import { useRef, useState } from "react"
 
-    export default function AnimatedNumberExample() {
+    export default function App() {
       const [number, setNumber] = useState("")
       const inputRef = useRef(null)
 
@@ -55,7 +57,7 @@ This component is self-contained and can be used by simply copying the file.
         </View>
       )
     }
-
+   ```
 ## 🛠 Prerequisites
 
 - React Native Reanimated
