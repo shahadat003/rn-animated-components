@@ -85,19 +85,19 @@ animationConfig can be one of two types. The `type` field determines which field
 
 | Field | Type | Required | Default | Note |
 |-------|------|----------|---------|------|
-| type | "timing" | yes | — | When this type is selected, the fields below are used |
-| duration | number | no | 300 | Duration in ms |
-| easing | EasingFunction | no | Easing.out(Easing.cubic) | Easing function |
+| type | "timing" | Yes | — | When this type is selected, the fields below are used |
+| duration | number | No | 300 | Duration in ms |
+| easing | EasingFunction | No | Easing.out(Easing.cubic) | Easing function |
 
 ### SpringOptions
 
 | Field | Type | Required | Default | Note |
 |-------|------|----------|---------|------|
-| type | "spring" | yes | — | When this type is selected, the fields below are used |
-| damping | number | no | 20 | Higher value reduces bounce |
-| mass | number | no | 1 | Larger mass slows down the animation |
-| stiffness | number | no | 100 | Higher value makes the animation faster |
-| overshootClamp | boolean | no | false | If true, prevents overshooting the target |
+| type | "spring" | Yes | — | When this type is selected, the fields below are used |
+| damping | number | No | 20 | Higher value reduces bounce |
+| mass | number | No | 1 | Larger mass slows down the animation |
+| stiffness | number | No | 100 | Higher value makes the animation faster |
+| overshootClamp | boolean | No | false | If true, prevents overshooting the target |
 
 Note: For `"timing"` type, duration is exact. For `"spring"` type, duration is physics-based.  
 If you need exact sync with other animations, use `"timing"` or calculate an approximate spring duration.
