@@ -1,5 +1,5 @@
 import { memo, useMemo, useRef } from "react";
-import { StyleProp, StyleSheet, TextStyle, ViewStyle } from "react-native";
+import { StyleProp, StyleSheet, Text, TextStyle, ViewStyle } from "react-native";
 import Animated, { EasingFunction, FadeInDown, FadeOutDown, LayoutAnimationFunction, LinearTransition, withSequence, withSpring, withTiming } from "react-native-reanimated";
 
 type SeparatorType = "comma" | "dot"
@@ -27,7 +27,9 @@ interface Props {
   textStyle?: StyleProp<TextStyle>,
   containerStyle?: StyleProp<ViewStyle>,
   separatorAnimation?: SeparatorAnimationType,
-  animationConfig?: AnimationConfigs
+  animationConfig?: AnimationConfigs,
+  prefix?: string,
+  suffix?: string
 }
 
 interface AnimatedTextProps {
@@ -149,7 +151,7 @@ function updateCharList( newInput: string | number, prev: CharWithId[], separato
 function estimateSpringDuration(mass: number = 1, stiffness: number = 100, damping: number = 10): number {
   const dampingRatio = damping / (2 * Math.sqrt(mass * stiffness))
   const settlingTime = 2 * Math.PI * Math.sqrt(mass / stiffness) * dampingRatio
-  return Math.round(settlingTime * 1000) // ms cinsinden
+  return Math.round(settlingTime * 1000)
 }
 
 function createLayoutAnimation(baseAnim: any, config: AnimationConfigs){
@@ -183,7 +185,6 @@ function createLayoutAnimation(baseAnim: any, config: AnimationConfigs){
 
     return anim
 }
-
 
 function AnimatedText({
   char, 
@@ -258,7 +259,9 @@ function AnimatedNumber({
   textStyle, 
   containerStyle, 
   separatorAnimation = "swap",
-  animationConfig = defaultAnimationConfigs
+  animationConfig = defaultAnimationConfigs,
+  prefix,
+  suffix
 }: Props){
   const prevList = useRef<any>([])
 
@@ -282,6 +285,12 @@ function AnimatedNumber({
       layout={LinearTransition}
     >
       {
+        prefix &&
+        <Animated.Text style={textStyle} layout={layoutAnimations.layout}>
+          {prefix}
+        </Animated.Text>
+      }
+      {
         units.map((item)=> {
           return (
             <AnimatedText
@@ -295,6 +304,12 @@ function AnimatedNumber({
             />
           )
         })
+      }
+      {
+        suffix &&
+        <Animated.Text style={textStyle} layout={layoutAnimations.layout}>
+          {suffix}
+        </Animated.Text>
       }
     </Animated.View>
   )

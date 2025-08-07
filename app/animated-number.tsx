@@ -1,7 +1,7 @@
 import AnimatedNumber from "@/components/AnimatedNumber/AnimatedNumber"
 import colors from "@/theme/colors"
 import React, { useRef, useState } from "react"
-import { Pressable, StyleSheet, Text, TextInput, View } from "react-native"
+import { StyleSheet, Text, TextInput, View } from "react-native"
 
 export default function AnimatedNumberExample() {
   const [number, setNumber] = useState("")
@@ -21,6 +21,7 @@ export default function AnimatedNumberExample() {
           animationConfig={{
             type: "spring"
           }}
+          prefix="£"
         />
       </View>
       <View style={{width: "100%", marginTop: 24}}>
@@ -32,6 +33,7 @@ export default function AnimatedNumberExample() {
           textStyle={styles.text}
           separatorAnimation={"translate"}
           containerStyle={{width: "100%", height: 40, marginTop: 16, justifyContent: "center"}}
+          prefix="¥"
         />
       </View>
       <View style={{width: "100%", marginTop: 24}}>
@@ -43,6 +45,7 @@ export default function AnimatedNumberExample() {
           textStyle={styles.text}
           separatorAnimation={"swap"}
           containerStyle={{width: "100%", height: 40, marginTop: 16, justifyContent: "center"}}
+          prefix="€"
         />
       </View>
       <View style={{width: "100%", marginTop: 24}}>
@@ -53,10 +56,11 @@ export default function AnimatedNumberExample() {
           number={number}
           textStyle={styles.text}
           separatorAnimation={"swap"}
+          containerStyle={{width: "100%", height: 40, marginTop: 16, justifyContent: "center"}}
           animationConfig={{
             type: "spring"
           }}
-          containerStyle={{width: "100%", height: 40, marginTop: 16, justifyContent: "center"}}
+          prefix="$"
         />
       </View>
       <TextInput
@@ -65,6 +69,8 @@ export default function AnimatedNumberExample() {
         style={{width: "100%", height: 0, backgroundColor: "transparent", position: "absolute", bottom: 0}}
         onChangeText={setNumber}
         keyboardType="numeric"
+        keyboardAppearance="dark"
+        
       />
     </View>
   )
@@ -108,6 +114,7 @@ const styles = StyleSheet.create({
     fontFamily: "SpaceMono-Regular",
     fontSize: 22,
     color: colors.p2,
-    textAlign: "center"
+    textAlign: "center",
+    opacity: 0.5
   }
 })
