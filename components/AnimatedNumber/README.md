@@ -66,11 +66,11 @@ This component is self-contained and can be used by simply copying the file.
 
 | Prop | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
-| number | string | Yes | — | The numeric string to display |
+| number | string | Yes | - | The numeric string to display |
 | separator | "comma" \| "dot" | No | "comma" | Separator type |
 | separatorAnimation | "swap" \| "translate" | No | "swap" | Animation behavior for separators |
-| textStyle | TextStyle | No | — | Custom style for each character digits and separators |
-| containerStyle | ViewStyle | No | — | Custom style for outer wrapper |
+| textStyle | TextStyle | No | - | Custom style for each character digits and separators |
+| containerStyle | ViewStyle | No | - | Custom style for outer wrapper |
 | animationConfig | AnimationConfigs | No | { type: "timing", duration: 300 } | Config for animation |
 | prefix | string | No | - |  Static text added before the number. |
 | suffix | string | No | - |  Static text added after the number. |
@@ -85,7 +85,7 @@ animationConfig can be one of two types. The `type` field determines which field
 
 | Field | Type | Required | Default | Note |
 |-------|------|----------|---------|------|
-| type | "timing" | Yes | — | When this type is selected, the fields below are used |
+| type | "timing" | Yes | - | When this type is selected, the fields below are used |
 | duration | number | No | 300 | Duration in ms |
 | easing | EasingFunction | No | - | Easing function |
 
@@ -93,7 +93,7 @@ animationConfig can be one of two types. The `type` field determines which field
 
 | Field | Type | Required | Default | Note |
 |-------|------|----------|---------|------|
-| type | "spring" | Yes | — | When this type is selected, the fields below are used |
+| type | "spring" | Yes | - | When this type is selected, the fields below are used |
 | damping | number | No | 20 | Higher value reduces bounce |
 | mass | number | No | 1 | Larger mass slows down the animation |
 | stiffness | number | No | 100 | Higher value makes the animation faster |
