@@ -3,6 +3,8 @@
 An animated number display with smooth transitions for both digits and separators.  
 Built using React Native Reanimated layout animations.
 
+https://github.com/user-attachments/assets/0c0f92b7-ef34-403a-a83d-d0ed53fed210
+
 ## ✨ Features
 
 - Smoothly animates number updates with layout transitions
