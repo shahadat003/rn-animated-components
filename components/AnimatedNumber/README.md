@@ -87,7 +87,7 @@ animationConfig can be one of two types. The `type` field determines which field
 |-------|------|----------|---------|------|
 | type | "timing" | Yes | — | When this type is selected, the fields below are used |
 | duration | number | No | 300 | Duration in ms |
-| easing | EasingFunction | No | Easing.out(Easing.cubic) | Easing function |
+| easing | EasingFunction | No | - | Easing function |
 
 ### SpringOptions
 
