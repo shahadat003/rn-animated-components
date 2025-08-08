@@ -21,6 +21,7 @@ Created with care by Niche Guys
 | `LiquidSwitch` | A smooth, physics-inspired toggle animation with liquid effect |
 | `ScratchCard`  | Customizable scratch surface with masking support              |
 | `CircleLoader` | Circular loader animation using radial motion                  |
+| `AnimatedNumber`| An animated number display with smooth transitions for both digits and separators|
 
 ---
 
