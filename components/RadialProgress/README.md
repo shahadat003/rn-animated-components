@@ -1,5 +1,7 @@
 # RadialProgress
 
+https://github.com/user-attachments/assets/af5b2883-38d7-4521-854a-9a021e7559e7
+
 A customizable animated radial progress indicator built with React Native Skia and Reanimated.
 Ideal for showing percentage based progress with smooth scaling and opacity animations.
 
