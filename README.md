@@ -4,6 +4,8 @@ A collection of visually rich, interactive, self-contained components built usin
 
 Created with care by Niche Guys
 
+Follow us on [Twitter](https://x.com/GuysNiche)
+
 ---
 
 ## ✨ Features
@@ -21,6 +23,7 @@ Created with care by Niche Guys
 | `LiquidSwitch` | A smooth, physics-inspired toggle animation with liquid effect |
 | `ScratchCard`  | Customizable scratch surface with masking support              |
 | `CircleLoader` | Circular loader animation using radial motion                  |
+| `AnimatedNumber`| An animated number display with smooth transitions for both digits and separators|
 
 ---
 
