@@ -83,8 +83,8 @@ This component is **self-contained** and can be used by simply copying the file.
 
 ## Notes
 
-• The component expects progress between zero and one
-• The text uses the provided Skia font for precise centering
-• The Canvas size accounts for the scale factor and line heights so lines never clip
+- The component expects progress between zero and one
+- The text uses the provided Skia font for precise centering
+- The Canvas size accounts for the scale factor and line heights so lines never clip
 
 Made with ❤️ by **niche.guys**
