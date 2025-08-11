@@ -123,5 +123,6 @@ If you need exact sync with other animations, use `"timing"` or calculate an app
 
 ---
 
-Made with ❤️ by niche.guys  
+Made with ❤️ by niche.guys
+Follow us on [Twitter](https://x.com/GuysNiche)
 Let the numbers flow beautifully.
