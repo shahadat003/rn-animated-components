@@ -38,7 +38,7 @@ This component is **self-contained** and can be used by simply copying the file.
             resizeMode="contain"
           />
           <Curtain
-            animationValue={animValue}
+            progress={animValue}
             containerStyle={{position: "absolute"}}
           />
         </View>
@@ -56,7 +56,7 @@ This component is **self-contained** and can be used by simply copying the file.
 
 | Prop      | Type       | Required | Default                                     | Description                          |
 |-----------|------------|----------|---------------------------------------------|--------------------------------------|
-| `animationValue`   | `SharedValue<number>`   | Yes       | -                    | Shared value used to animate curtains, changes between 0-1 |
+| `progress`   | `SharedValue<number>`   | Yes       | -                    | Shared value used to animate curtains, changes between 0-1 |
 | `width`   | `number`   | No       | `screen_width`                              | Container width                      |
 | `height`  | `number`   | No       | `screen_height`                             | Container height                     |
 | `minY`    | `number`   | No       | `80`                                        | y value to start animation           |
