@@ -2,7 +2,8 @@
 
 A curtain like animation with **React Native Skia** and **Reanimated**.  
 A gesture based curtain animation which reveals the content behind. You can also pass your own SharedValue from outside to control the curtain’s motion.
-This allows you to drive the curtain animation manually or synchronize it with other animations that react to the same value.
+
+https://github.com/user-attachments/assets/84bc8387-0083-4fbd-bed7-fc1a2df9a536
 
 ## ✨ Features
 
